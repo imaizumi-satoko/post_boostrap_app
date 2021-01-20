@@ -18,11 +18,11 @@ class PostsController < ApplicationController
   def create
     post = Post.create!(post_params)
     redirect_to post, notice: "投稿しました"
-    #flash[:notice] = "投稿しました"
+    #flash[:nogice]
+
   end
 
   def edit
-
   end
 
   def update
@@ -34,10 +34,15 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy!
-    redirect_to root_path, alert: "削除しました"
+    redirect_to posts_path, alert: "削除しました"
   end
 
   private
+
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
   def post_params
     params.require(:post).permit(:title, :content)
   end
