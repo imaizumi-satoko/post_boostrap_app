@@ -19,10 +19,43 @@
  @import "@fortawesome/fontawesome-free/scss/fontawesome";
  @import "@fortawesome/fontawesome-free/scss/regular";
 
- div.field_with_errors {
+ .field_with_errors {
    display: contents;
  }
 
  input{
    border: 2px solid red;
+ }
+
+ .base-container{
+   @extend .container-fluid;
+   max-width: var(--breakpoint-lg);
+   padding: 30px 15px;
+ }
+
+ body{
+   padding-top: 56px;
+ }
+
+ th,
+ td{
+   vertical-align: middle !important;
+ }
+
+ .break-word{
+   word-break: break-word;
+ }
+
+ .alert-notice{
+   @extend .alert-info;
+ }
+
+ .alert-alert{
+   @extend .alert-danger;
+ }
+
+
+ input,
+ textarea{
+   @extend .is-invalid;
  }
