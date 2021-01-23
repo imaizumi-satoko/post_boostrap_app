@@ -36,3 +36,20 @@
  body{
    padding-top: 56px;
  }
+
+ th,
+ td{
+   vertical-align: middle !important;
+ }
+
+ .break-word{
+   word-break: break-word;
+ }
+
+ .alert-notice{
+   @extend .alert-info;
+ }
+
+ .alert-alert{
+   @extend .alert-danger;
+ }
