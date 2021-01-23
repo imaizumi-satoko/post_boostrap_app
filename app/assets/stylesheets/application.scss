@@ -19,7 +19,7 @@
  @import "@fortawesome/fontawesome-free/scss/fontawesome";
  @import "@fortawesome/fontawesome-free/scss/regular";
 
- div.field_with_errors {
+ .field_with_errors {
    display: contents;
  }
 
@@ -52,4 +52,10 @@
 
  .alert-alert{
    @extend .alert-danger;
+ }
+
+
+ input,
+ textarea{
+   @extend .is-invalid;
  }
